@@ -33,8 +33,15 @@
 
                 <li class="nav-item">
                     <a href="{{ route('perubahanModal') }}" class="nav-link">
-                        <i class="nav-icon fa fa-dashboard"></i>
+                        <i class="nav-icon fa fa-pie-chart"></i>
                         <p>Modals</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('neraca.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-balance-scale"></i>
+                        <p>Neraca</p>
                     </a>
                 </li>
                 <li class="nav-item">

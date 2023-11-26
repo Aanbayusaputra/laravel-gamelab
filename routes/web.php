@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\TblPerubahanModalController;
+use App\Http\Controllers\TblNeracaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +29,12 @@ Route::middleware('auth')->group(function() {
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 //modal
-
-
-
 Route::get('/modals', [TblPerubahanModalController::class, 'index'])->name('perubahanModal');
 Route::get('/modals/create', [TblPerubahanModalController::class, 'create'])->name('createPerubahanModal');
 Route::post('/modals', [TblPerubahanModalController::class, 'store'])->name('storePerubahanModal');
 Route::get('/modals/{id}/edit', [TblPerubahanModalController::class, 'edit'])->name('editPerubahanModal');
 // Route::put('/modals/{id}', [TblPerubahanModalController::class, 'update'])->name('updatePerubahanModal');
 Route::get('/modals/{id}', [TblPerubahanModalController::class, 'destroy'])->name('deletePerubahanModal');
+
+//neraca
+Route::get('/neraca', [TblNeracaController::class, 'index'])->name('neraca.index');
